@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Splash from './screens/Splash';
 import Onboarding from './screens/Onboarding';
 import Home from './screens/Home';
-import Breathing from './screens/Breathing';
+import Health from './screens/Health';
 import Settings from './screens/Settings';
 import Journal from './screens/Journal';
 import JournalList from './screens/JournalList';
@@ -30,7 +30,7 @@ function App() {
             <Route path="/" element={<Splash />} />
             <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/breathing" element={<Breathing />} />
+            <Route path="/health" element={<Health />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal-list" element={<JournalList />} />

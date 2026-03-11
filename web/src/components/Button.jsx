@@ -37,6 +37,7 @@ const Button = ({ children, onClick, variant = 'primary', style, className = '',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    borderStyle: 'solid',
     gap: '8px',
     width: '100%',
     ...getVariantStyles(),
@@ -48,7 +49,7 @@ const Button = ({ children, onClick, variant = 'primary', style, className = '',
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.95 }}
       style={baseStyles}
-      className={`transition-base ${className}`}
+      className={`transition-base ${className} btn-bg-white`}
       onClick={onClick}
       {...props}
     >

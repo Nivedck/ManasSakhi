@@ -22,6 +22,8 @@ const Settings = () => {
         <h1 className="title">Settings</h1>
       </header>
 
+      <NavBar />
+
       <div className="settings-content" style={{ padding: '24px' }}>
         
         {/* Privacy Badge */}
@@ -100,8 +102,6 @@ const Settings = () => {
         </div>
 
       </div>
-
-      <NavBar />
     </div>
   );
 };
