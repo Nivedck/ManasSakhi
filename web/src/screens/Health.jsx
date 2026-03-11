@@ -74,7 +74,7 @@ const Health = () => {
         
         {!isConnected ? (
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-            <div style={{ backgroundColor: 'var(--white)', padding: '24px', borderRadius: '50%', marginBottom: '24px', color: 'var(--text-secondary)', boxShadow: 'var(--shadow)' }}>
+            <div style={{ backgroundColor: 'var(--white)', padding: '24px', borderRadius: '50%', marginBottom: '24px', color: 'var(--text-secondary)', boxShadow: 'var(--shadow-sm)' }}>
                <Watch size={48} />
             </div>
             <h2 style={{ fontSize: '20px', marginBottom: '12px' }}>No Watch Connected</h2>
@@ -117,7 +117,7 @@ const Health = () => {
                  padding: '24px 16px 16px 16px', 
                  borderRadius: '24px', 
                  boxShadow: 'var(--shadow)',
-                 border: '1px solid rgba(0,0,0,0.02)'
+                 border: '1px solid rgba(255, 255, 255, 0.8)'
               }}
             >
               <div style={{ width: '100%', height: '140px' }}>
@@ -150,7 +150,7 @@ const Health = () => {
                  initial={{ opacity: 0, y: 20 }}
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ delay: 0.2 }}
-                 style={{ backgroundColor: 'var(--white)', padding: '20px', borderRadius: '20px', boxShadow: 'var(--shadow)', border: '1px solid rgba(0,0,0,0.02)' }}
+                 style={{ backgroundColor: 'var(--white)', padding: '20px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow)', border: '1px solid rgba(255, 255, 255, 0.8)' }}
                >
                   <Activity color="var(--primary-blue)" size={24} style={{ marginBottom: '12px' }} />
                   <h4 style={{ color: 'var(--text-secondary)', fontSize: '12px', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Blood Pressure</h4>
@@ -161,7 +161,7 @@ const Health = () => {
                  initial={{ opacity: 0, y: 20 }}
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ delay: 0.3 }}
-                 style={{ backgroundColor: 'var(--white)', padding: '20px', borderRadius: '20px', boxShadow: 'var(--shadow)', border: '1px solid rgba(0,0,0,0.02)' }}
+                 style={{ backgroundColor: 'var(--white)', padding: '20px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow)', border: '1px solid rgba(255, 255, 255, 0.8)' }}
                >
                   <Thermometer color="var(--alert-orange)" size={24} style={{ marginBottom: '12px' }} />
                   <h4 style={{ color: 'var(--text-secondary)', fontSize: '12px', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Skin Temp</h4>

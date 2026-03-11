@@ -27,7 +27,7 @@ const Settings = () => {
       <div className="settings-content" style={{ padding: '24px' }}>
         
         {/* Privacy Badge */}
-        <div style={{ backgroundColor: 'var(--bg-light)', padding: '16px', borderRadius: 'var(--border-radius)', display: 'flex', alignItems: 'center', gap: '12px', border: '1px solid rgba(77, 181, 181, 0.3)', marginBottom: '32px' }}>
+        <div style={{ background: 'linear-gradient(135deg, rgba(77, 181, 181, 0.1), rgba(107, 154, 196, 0.05))', padding: '16px', borderRadius: 'var(--border-radius)', display: 'flex', alignItems: 'center', gap: '12px', border: '1px solid rgba(77, 181, 181, 0.2)', marginBottom: '32px', boxShadow: 'var(--shadow-sm)' }}>
           <Lock color="var(--primary-teal)" size={24} />
           <div>
             <h4 style={{ fontSize: '14px', fontWeight: '700', color: 'var(--text-primary)' }}>Privacy First</h4>
@@ -74,7 +74,7 @@ const Settings = () => {
         </div>
 
         {/* Demo Mode */}
-        <div style={{ backgroundColor: '#fff', padding: '24px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow)', border: '1px solid #e2e8f0' }}>
+        <div style={{ backgroundColor: '#fff', padding: '24px', borderRadius: 'var(--border-radius-lg)', boxShadow: 'var(--shadow)', border: '1px solid #e2e8f0' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
             <SettingsIcon size={20} color="var(--primary-blue)" />
             <h3 style={{ fontSize: '16px' }}>Demo Controls</h3>

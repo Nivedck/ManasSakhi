@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, Activity, Settings } from 'lucide-react';
+import { Home, Activity, Settings, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const NavBar = () => {
@@ -9,6 +9,7 @@ const NavBar = () => {
       <div className="nav-content">
         <NavItem to="/home" icon={<Home size={24} />} label="Home" />
         <NavItem to="/health" icon={<Activity size={24} />} label="Health" />
+        <NavItem to="/sleep" icon={<Moon size={24} />} label="Sleep" />
         <NavItem to="/settings" icon={<Settings size={24} />} label="Settings" />
       </div>
     </nav>

@@ -6,15 +6,17 @@ const Button = ({ children, onClick, variant = 'primary', style, className = '',
     switch (variant) {
       case 'primary':
         return {
-          backgroundColor: 'var(--primary-teal)',
+          background: 'var(--gradient-primary)',
           color: 'var(--white)',
           border: 'none',
+          boxShadow: '0 4px 14px rgba(59, 145, 145, 0.3)',
         };
       case 'secondary':
         return {
-          backgroundColor: 'transparent',
+          backgroundColor: 'var(--white)',
           color: 'var(--primary-teal)',
-          border: '2px solid var(--primary-teal)',
+          border: '2px solid rgba(59, 145, 145, 0.2)',
+          boxShadow: 'var(--shadow-sm)',
         };
       case 'text':
         return {
@@ -29,17 +31,17 @@ const Button = ({ children, onClick, variant = 'primary', style, className = '',
   };
 
   const baseStyles = {
-    padding: '12px 24px',
+    padding: '14px 24px',
     borderRadius: 'var(--border-radius)',
     fontSize: '16px',
-    fontWeight: '600',
+    fontWeight: '700',
     cursor: 'pointer',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderStyle: 'solid',
     gap: '8px',
     width: '100%',
+    transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
     ...getVariantStyles(),
     ...style,
   };
@@ -49,7 +51,7 @@ const Button = ({ children, onClick, variant = 'primary', style, className = '',
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.95 }}
       style={baseStyles}
-      className={`transition-base ${className} btn-bg-white`}
+      className={`transition-base ${className}`}
       onClick={onClick}
       {...props}
     >

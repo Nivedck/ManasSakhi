@@ -9,12 +9,12 @@ const WellnessCard = ({ item }) => {
 
   const getIcon = () => {
     switch (item.type) {
-      case 'audio': return <Play size={20} className="card-icon" />;
-      case 'journal': return <FileText size={20} className="card-icon" />;
-      case 'contact': return <Phone size={20} className="card-icon" />;
+      case 'audio': return <Play size={22} />;
+      case 'journal': return <FileText size={22} />;
+      case 'contact': return <Phone size={22} />;
       case 'intervention':
       case 'exercise':
-      default: return <Compass size={20} className="card-icon" />;
+      default: return <Compass size={22} />;
     }
   };
 
@@ -35,7 +35,9 @@ const WellnessCard = ({ item }) => {
       whileHover={{ y: -2 }}
     >
       <div className="card-header">
-        {getIcon()}
+        <div className="card-icon">
+          {getIcon()}
+        </div>
         <h3 className="card-title">{item.title}</h3>
       </div>
       <p className="card-text">{item.text}</p>

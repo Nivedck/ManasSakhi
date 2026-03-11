@@ -4,6 +4,7 @@ import Splash from './screens/Splash';
 import Onboarding from './screens/Onboarding';
 import Home from './screens/Home';
 import Health from './screens/Health';
+import Sleep from './screens/Sleep';
 import Settings from './screens/Settings';
 import Journal from './screens/Journal';
 import JournalList from './screens/JournalList';
@@ -31,6 +32,7 @@ function App() {
             <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/home" element={<Home />} />
             <Route path="/health" element={<Health />} />
+            <Route path="/sleep" element={<Sleep />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal-list" element={<JournalList />} />

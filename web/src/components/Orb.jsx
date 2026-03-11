@@ -33,21 +33,21 @@ const Orb = () => {
       <motion.div
         className="orb-core"
         style={{
-          backgroundColor: color,
+          background: `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), ${color} 60%)`, // 3D sphere gradient
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'white',
-          position: 'absolute', /* Ensure the icon is centered over the glow */
-          zIndex: 2 /* Show above glow */
+          color: 'rgba(255, 255, 255, 0.95)',
+          position: 'absolute',
+          zIndex: 2,
+          boxShadow: `inset -10px -10px 20px rgba(0,0,0,0.1), 0 10px 30px ${color}66` // Inner depth + colored drop shadow
         }}
         animate={{
           scale: isCalm ? 1 : 1.1,
-          backgroundColor: color
         }}
         transition={{ duration: 0.8 }}
       >
-        {isCalm ? <Smile size={200} strokeWidth={1.5} /> : <Frown size={200} strokeWidth={1.5} />}
+        {isCalm ? <Smile size={200} strokeWidth={2} /> : <Frown size={200} strokeWidth={2} />}
       </motion.div>
     </div>
   );

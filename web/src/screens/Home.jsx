@@ -63,7 +63,7 @@ const Home = () => {
       >
         <div>
           <h1 className="title">Good Evening,</h1>
-          <p className="subtitle" style={{ color: 'var(--primary-teal)', fontWeight: '700' }}>
+          <p className="subtitle">
             {userProfile.name}
           </p>
         </div>
@@ -72,7 +72,7 @@ const Home = () => {
           className="avatar-circle" 
           style={{ 
              cursor: 'pointer', 
-             border: isWatchConnected ? '2px solid var(--primary-teal)' : '2px dashed var(--text-secondary)',
+             border: isWatchConnected ? '2.5px solid var(--primary-teal)' : '2.5px dashed var(--text-secondary)',
              background: 'none',
              position: 'relative'
           }}
@@ -147,9 +147,9 @@ const Home = () => {
                )}
 
                <div style={{ 
-                 backgroundColor: watchConnectionState === 'connected' ? 'rgba(77, 181, 181, 0.1)' : 'var(--bg-light)', 
+                 background: watchConnectionState === 'connected' ? 'var(--gradient-primary)' : 'var(--bg-light)', 
                  padding: '24px', borderRadius: '50%', marginBottom: '24px',
-                 color: watchConnectionState === 'connected' ? 'var(--primary-teal)' : 'var(--primary-blue)',
+                 color: watchConnectionState === 'connected' ? 'var(--white)' : 'var(--primary-blue)',
                  transition: 'all 0.3s'
                }}>
                  {watchConnectionState === 'connected' ? <CheckCircle size={48} /> : <Watch size={48} />}

@@ -57,16 +57,18 @@ const Journal = () => {
           style={{ 
             flex: 1, 
             width: '100%', 
-            padding: '16px', 
-            borderRadius: '12px', 
-            border: '1px solid rgba(77, 181, 181, 0.3)', 
+            padding: '20px', 
+            borderRadius: 'var(--border-radius)', 
+            border: '1px solid rgba(77, 181, 181, 0.2)', 
             outline: 'none', 
             resize: 'none', 
             fontFamily: 'inherit', 
             fontSize: '16px', 
+            lineHeight: '1.6',
             color: 'var(--text-primary)',
-            boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.02)',
-            marginBottom: '24px'
+            boxShadow: 'inset 0 2px 6px rgba(0,0,0,0.03)',
+            marginBottom: '24px',
+            backgroundColor: 'var(--white)'
           }}
         />
 
