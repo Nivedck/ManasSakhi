@@ -41,13 +41,32 @@ const WellnessCard = ({ item }) => {
       <p className="card-text">{item.text}</p>
       
       <div className="card-action">
-        <Button 
-           variant="secondary" 
-           onClick={handleAction}
-           style={{ padding: '8px 16px', fontSize: '14px', width: 'auto' }}
-        >
-           {item.actionText}
-        </Button>
+        {item.type === 'journal' ? (
+           <div style={{ display: 'flex', gap: '8px' }}>
+              <Button 
+                variant="text" 
+                onClick={() => navigate('/journal-list')}
+                style={{ padding: '8px 12px', fontSize: '14px', width: 'auto' }}
+              >
+                Read Past
+              </Button>
+              <Button 
+                variant="secondary" 
+                onClick={() => navigate('/journal')}
+                style={{ padding: '8px 16px', fontSize: '14px', width: 'auto' }}
+              >
+                 Write New
+              </Button>
+           </div>
+        ) : (
+          <Button 
+             variant="secondary" 
+             onClick={handleAction}
+             style={{ padding: '8px 16px', fontSize: '14px', width: 'auto' }}
+          >
+             {item.actionText}
+          </Button>
+        )}
       </div>
     </motion.div>
   );

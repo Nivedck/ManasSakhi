@@ -57,3 +57,21 @@ export const userProfile = {
   name: "Friend",
   avatar: "👋" // Using emoji as placeholder icon
 };
+
+export const mockJournalEntries = [
+  {
+    id: 'j1',
+    date: 'Oct 24, 2023 8:30 AM',
+    text: 'Woke up feeling refreshed. The weather is beautiful today.'
+  },
+  {
+    id: 'j2',
+    date: 'Oct 23, 2023 9:15 PM',
+    text: 'Felt a bit overwhelmed with work, but the evening walk helped clear my mind.'
+  },
+  {
+    id: 'j3',
+    date: 'Oct 22, 2023 7:00 AM',
+    text: 'Slept really well! Ready to tackle the day.'
+  }
+];

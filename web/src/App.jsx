@@ -6,6 +6,7 @@ import Home from './screens/Home';
 import Breathing from './screens/Breathing';
 import Settings from './screens/Settings';
 import Journal from './screens/Journal';
+import JournalList from './screens/JournalList';
 import Audio from './screens/Audio';
 import Gratitude from './screens/Gratitude';
 import Grounding from './screens/Grounding';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/breathing" element={<Breathing />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/journal" element={<Journal />} />
+            <Route path="/journal-list" element={<JournalList />} />
             <Route path="/audio" element={<Audio />} />
             <Route path="/gratitude" element={<Gratitude />} />
             <Route path="/grounding" element={<Grounding />} />
