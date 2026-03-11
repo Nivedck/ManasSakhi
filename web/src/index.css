@@ -308,3 +308,144 @@ p {
   cursor: pointer;
   z-index: 50;
 }
+
+/* Floating Chat Panel */
+.chat-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 32, 44, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 120;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+}
+
+.chat-panel {
+  width: 100%;
+  max-width: 440px;
+  height: calc(100% - 40px);
+  background: radial-gradient(circle at top, rgba(77, 181, 181, 0.12), rgba(255, 255, 255, 0.98) 55%);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(77, 181, 181, 0.25);
+}
+
+.chat-header {
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(77, 181, 181, 0.2), rgba(107, 154, 196, 0.08));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(77, 181, 181, 0.2);
+}
+
+.chat-header h3 {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.chat-header p {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.chat-close {
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.chat-body {
+  flex: 1;
+  padding: 16px 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.45;
+  box-shadow: var(--shadow);
+}
+
+.chat-bubble-assistant {
+  align-self: flex-start;
+  background: var(--white);
+  border: 1px solid rgba(77, 181, 181, 0.25);
+}
+
+.chat-bubble-user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, rgba(77, 181, 181, 0.9), rgba(107, 154, 196, 0.9));
+  color: var(--white);
+}
+
+.chat-input {
+  padding: 16px 18px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border-top: 1px solid rgba(77, 181, 181, 0.15);
+}
+
+.chat-input input {
+  flex: 1;
+  border: 1px solid rgba(77, 181, 181, 0.25);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 14px;
+  outline: none;
+  background: rgba(249, 249, 249, 0.9);
+}
+
+.chat-input button {
+  border: none;
+  background: var(--primary-teal);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(77, 181, 181, 0.35);
+}
+
+.chat-input button:disabled,
+.chat-input input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.chat-typing {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.chat-error {
+  align-self: center;
+  background: rgba(255, 139, 120, 0.15);
+  color: var(--alert-coral);
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
