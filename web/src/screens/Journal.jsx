@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Save } from 'lucide-react';
 import Button from '../components/Button';
+import { mockJournalEntries } from '../data/mockData';
 
 const Journal = () => {
   const [entry, setEntry] = useState('');
@@ -11,6 +12,18 @@ const Journal = () => {
 
   const handleSave = () => {
     if (entry.trim()) {
+      const saved = localStorage.getItem('manassakhi_journals');
+      const existingEntries = saved ? JSON.parse(saved) : mockJournalEntries;
+      
+      const newEntry = {
+        id: 'j' + Date.now(),
+        date: new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true }),
+        text: entry.trim()
+      };
+      
+      const updatedEntries = [newEntry, ...existingEntries];
+      localStorage.setItem('manassakhi_journals', JSON.stringify(updatedEntries));
+
       setIsSaved(true);
       setTimeout(() => {
         navigate('/home');

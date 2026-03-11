@@ -17,12 +17,12 @@ export const feedContent = {
       route: "/audio"
     },
     {
-       id: "c3",
-       title: "Gratitude Check-in",
-       text: "What are 3 things you are grateful for today?",
-       actionText: "Start",
-       type: "exercise",
-       route: "/gratitude"
+      id: "c3",
+      title: "Gratitude Check-in",
+      text: "What are 3 things you are grateful for today?",
+      actionText: "Start",
+      type: "exercise",
+      route: "/gratitude"
     }
   ],
   stressed: [
@@ -42,7 +42,7 @@ export const feedContent = {
       type: "exercise",
       route: "/grounding"
     },
-     {
+    {
       id: "s3",
       title: "Talk to Someone",
       text: "Reach out to a trusted contact or helpline.",
@@ -55,7 +55,7 @@ export const feedContent = {
 
 export const userProfile = {
   name: "Friend",
-  avatar: "👋" // Using emoji as placeholder icon
+  avatar: "👨‍💻" // Using emoji as placeholder icon
 };
 
 export const mockJournalEntries = [

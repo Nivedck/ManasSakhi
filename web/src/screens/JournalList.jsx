@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, BookOpen, PenLine } from 'lucide-react';
@@ -7,6 +7,17 @@ import { mockJournalEntries } from '../data/mockData';
 
 const JournalList = () => {
   const navigate = useNavigate();
+  const [entries, setEntries] = useState([]);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('manassakhi_journals');
+    if (saved) {
+      setEntries(JSON.parse(saved));
+    } else {
+      setEntries(mockJournalEntries);
+      localStorage.setItem('manassakhi_journals', JSON.stringify(mockJournalEntries));
+    }
+  }, []);
 
   return (
     <div className="screen-container" style={{ backgroundColor: 'var(--bg-light)' }}>
@@ -37,8 +48,8 @@ const JournalList = () => {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          {mockJournalEntries.length > 0 ? (
-            mockJournalEntries.map((entry, index) => (
+          {entries.length > 0 ? (
+            entries.map((entry, index) => (
               <motion.div 
                 key={entry.id}
                 initial={{ opacity: 0, y: 10 }}
@@ -56,7 +67,7 @@ const JournalList = () => {
                   <BookOpen size={16} />
                   <span style={{ fontSize: '12px', fontWeight: 'bold' }}>{entry.date}</span>
                 </div>
-                <p style={{ color: 'var(--text-primary)', fontSize: '14px', lineHeight: '1.5', margin: 0 }}>
+                <p style={{ color: 'var(--text-primary)', fontSize: '14px', lineHeight: '1.5', margin: 0, whiteSpace: 'pre-wrap' }}>
                   {entry.text}
                 </p>
               </motion.div>
