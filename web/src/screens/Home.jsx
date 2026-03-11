@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import Orb from '../components/Orb';
 import WellnessCard from '../components/WellnessCard';
 import FloatingChat from '../components/FloatingChat';
+import MoodGraph from '../components/MoodGraph';
 import { feedContent, userProfile } from '../data/mockData';
 
 const Home = () => {
@@ -37,6 +38,11 @@ const Home = () => {
           {currentMood === 'calm' ? 'You seem balanced today.' : 'Take a moment to center yourself.'}
         </h2>
         <Orb />
+      </section>
+
+      {/* Mood Graph Section */}
+      <section style={{ padding: '0 24px' }}>
+        <MoodGraph />
       </section>
 
       {/* Feed Section */}
